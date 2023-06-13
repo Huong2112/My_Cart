@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_rectangle_background3"
+        android:paddingRight="2dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imgview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/name">
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <View
+            android:id="@+id/mother"
+            android:layout_width="0dp"
+            android:layout_height= "0dp"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintStart_toEndOf="@+id/imgview"
+            app:layout_constraintEnd_toStartOf="@+id/quantity"
+            app:layout_constraintTop_toTopOf="@id/imgview"
+            app:layout_constraintBottom_toBottomOf="@+id/imgview">
+
+        </View>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/mother"
+            app:layout_constraintEnd_toEndOf="@id/mother"
+            app:layout_constraintTop_toTopOf="@id/mother"
+            app:layout_constraintBottom_toBottomOf="@id/mother"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/nameincart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Vay thiet ke cho sinh viên nữ">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/cartprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="150.000"
+                android:textColor="@color/colorPrice"
+                android:textSize="14sp">
+
+            </TextView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/quantity"
+
+            android:layout_width="0dp"
+            android:layout_height= "0dp"
+            app:layout_constraintWidth_percent="0.15"
+           app:layout_constraintEnd_toStartOf="@+id/amount"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/name"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            >
+
+            <ImageButton
+                android:id="@+id/plus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="center"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/baseline_add_circle_24"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageButton>
+            <TextView
+                android:id="@+id/quant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrice"
+                android:text="4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/plus"
+                app:layout_constraintBottom_toTopOf="@+id/minus"
+                android:textSize="16sp">
+
+            </TextView>
+            <ImageButton
+                android:id="@+id/minus"
+                android:layout_marginBottom="1dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/baseline_remove_circle_24">
+
+            </ImageButton>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.2"
+            android:text="500.000d"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/quantity"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </TextView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>
